@@ -1,0 +1,21 @@
+
+http://stackoverflow.com/questions/27354789/how-can-i-split-html-content-into-pages-that-fit-the-screen
+http://stackoverflow.com/questions/10006766/split-html-string-into-multiple-pages
+
+Ways seem to basically let the content render, then wrap around the excess content somehow, including:
+There seem to be a few basic methods:
+A. Recursively with javascript (split at different points until it works): a lot of work and probably slow
+B. Let the browser do it, probably thought columns: seems promising, not sure how well it handles long tables and the likes...
+C. Render the whole page but show only a section: page borders will cut through images, not usable
+Maybe there's a way to use columns to find the break point, then implement those breaks with javascript
+
+It does this client-side using javascript, since users may want to switch back and forth, and since it can't be done
+without rendering the page. Also it should be applied to the output page (could be post-process).
+Might cause performance issues though, especially on phones etc.
+
+Can this rendering stuff be done off-screen? It has to be technically visible I think, but maybe visibility:hidden or absolutely-positioned outside the screen (top:110vh) or something
+
+First make it without moving figures and tables around, because things become incredibly messy if that's allowed.
+Possibly a simple hack would be to move blocks of a minimum hight a few paragraphs down and up, and see if that decreases the total length. Moving can be restricted to the same and next page.
+
+
