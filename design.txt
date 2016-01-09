@@ -1,6 +1,7 @@
 
 http://stackoverflow.com/questions/27354789/how-can-i-split-html-content-into-pages-that-fit-the-screen
 http://stackoverflow.com/questions/10006766/split-html-string-into-multiple-pages
+http://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 
 Ways seem to basically let the content render, then wrap around the excess content somehow, including:
 There seem to be a few basic methods:
